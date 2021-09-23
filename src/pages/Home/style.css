@@ -1,0 +1,42 @@
+.home-ps {
+  margin-top: 40px;
+}
+
+.home-text {
+  text-align: center;
+  margin: 15px 10px;
+}
+
+.form-input {
+  display: flex;
+  justify-content: center;
+}
+
+.form-input input {
+  margin: 0 20px 15px;
+  padding: 20px;
+  width: 30%;
+  height: 30px;
+  border: 1px solid black;
+  border-radius: 5px;
+} 
+
+.form-button {
+  padding: 20px;
+  height: 30px;
+
+  display: flex;
+  align-items: center;
+
+  background-color: #D3222A;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.form-button p {
+  font-size: 1rem;
+  color: #fbb82c;
+}
+
+

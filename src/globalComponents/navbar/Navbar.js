@@ -17,7 +17,7 @@ const NavBar = ({ activeItem }) => {
       </div>
       <div className="nav-bar-div">
         <a className="link" href="/">
-          <img src={logo} alt="E-Burguer" />
+          <img src={logo} alt="E-Burguer" className="nav-image" />
         </a>
       </div>
       <div className="nav-bar-div">

@@ -1,0 +1,33 @@
+.nav-bar {
+  background-color: #D3222A;
+  width: 100%;
+  display: flex;
+  flex: 1;
+  justify-content: space-around;
+}
+
+.nav-bar-div {
+  align-self: center;
+}
+
+.linkActive {
+  font-size: 1.6rem;
+  text-decoration: none;
+  color: darkslategray;
+  cursor: pointer;
+} 
+
+.link {
+  font-size: 2.2rem;
+  text-decoration: none;
+  color: #fbb82c;
+  cursor: pointer;
+}
+
+.login {
+  color: white;
+}
+
+.link:hover {
+  color: rgb(68, 77, 87);
+} 

@@ -1,7 +1,8 @@
 import './App.css';
+import NavBar from './globalComponents/navbar/Navbar';
 
 function App() {
-  return <h1>E-Burguer</h1>;
+  return <NavBar></NavBar>;
 }
 
 export default App;

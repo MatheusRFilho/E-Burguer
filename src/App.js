@@ -4,6 +4,7 @@ import './App.css';
 import Home from './pages/Home';
 import Hamburguerias from './pages/hamburguerias';
 import Pedidos from './pages/pedidos';
+import FaleConosco from './pages/faleConosco';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Route path="/" component={Home} exact />
         <Route path="/hamburguerias" component={Hamburguerias} />
         <Route path="/pedidos" component={Pedidos} />
+        <Route path="/fale-conosco" component={FaleConosco} />
         {/* <Route path="/new-vehicle" component={BuyNewVehicle} /> */}
       </Switch>
     </BrowserRouter>

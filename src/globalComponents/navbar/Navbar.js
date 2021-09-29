@@ -27,7 +27,7 @@ const NavBar = ({ activeItem }) => {
         </a>
       </div>
       <div className="nav-bar-div">
-        <a className="link" href="/">
+        <a className="link" href="/fale-conosco">
           Fale Conosco
         </a>
       </div>

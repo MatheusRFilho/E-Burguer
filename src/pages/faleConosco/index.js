@@ -4,10 +4,25 @@ import Footer from '../../globalComponents/footer/Footer.js';
 import { useState } from 'react';
 
 function FaleConosco() {
-  const [searchText, setSearchText] = useState('');
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [phone, setPhone] = useState('');
+  const [reclamation, setReclamation] = useState('');
 
-  const handleSearchText = (event) => {
-    setSearchText(event.target.value);
+  const handleName = (event) => {
+    setName(event.target.value);
+  };
+
+  const handleEmail = (event) => {
+    setEmail(event.target.value);
+  };
+
+  const handlePhone = (event) => {
+    setPhone(event.target.value);
+  };
+
+  const handleReclamation = (event) => {
+    setReclamation(event.target.value);
   };
 
   return (
@@ -20,8 +35,8 @@ function FaleConosco() {
               <label>Nome</label>
               <input
                 type="text"
-                value={searchText}
-                onChange={handleSearchText}
+                value={name}
+                onChange={handleName}
                 placeholder="Matheus Rodrigo"
                 id="searchText"
               />
@@ -31,8 +46,8 @@ function FaleConosco() {
               <label>Email</label>
               <input
                 type="text"
-                value={searchText}
-                onChange={handleSearchText}
+                value={email}
+                onChange={handleEmail}
                 placeholder="SeuEmail@gmail.com"
                 id="searchText"
               />
@@ -42,8 +57,8 @@ function FaleConosco() {
               <label>Telefone</label>
               <input
                 type="text"
-                value={searchText}
-                onChange={handleSearchText}
+                value={phone}
+                onChange={handlePhone}
                 placeholder="(12)99999-9999"
                 id="searchText"
               />
@@ -53,7 +68,7 @@ function FaleConosco() {
               type="button"
               className="form-button-fale-conosco"
               onClick={() => {
-                console.log(searchText);
+                console.log('a');
               }}
             >
               <p>Buscar</p>
@@ -64,8 +79,8 @@ function FaleConosco() {
               <label>Digite aqui</label>
               <textarea
                 type="text"
-                value={searchText}
-                onChange={handleSearchText}
+                value={reclamation}
+                onChange={handleReclamation}
                 placeholder="Escreva sua Reclamação aqui"
                 id="searchText"
               />

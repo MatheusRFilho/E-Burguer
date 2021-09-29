@@ -1,0 +1,75 @@
+.content {
+  height: 100vh;
+}
+
+.home-ps {
+  margin-top: 40px;
+}
+
+.home-text {
+  margin: 15px 10px;
+}
+
+.form-input {
+  display: flex;
+  justify-content: center;
+}
+
+.form-input input {
+  margin: 0 20px 15px;
+  padding: 20px;
+  width: 30%;
+  height: 30px;
+  border: 1px solid black;
+  border-radius: 5px;
+} 
+
+.form-button {
+  padding: 20px;
+  height: 30px;
+
+  display: flex;
+  align-items: center;
+
+  background-color: #D3222A;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.form-button p {
+  font-size: 1rem;
+  color: #fbb82c;
+}
+
+.hamburguerias-card {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-gap: 30px;
+
+  margin: 20px 30px ;
+}
+
+.pedidos-div {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+}
+
+.pedidos-div .firstDiv {
+  margin-top: 20px;
+  width: 50%;
+}
+
+.pedidos-div .secondDiv {
+  text-align: center;
+  margin: 20px auto;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 10px;
+} 
+
+.pedidos-div .secondDiv h4 {
+  margin-bottom: 20px;
+}
+

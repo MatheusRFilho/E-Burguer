@@ -12,7 +12,7 @@ const NavBar = ({ activeItem }) => {
       </div>
       <div className="nav-bar-div">
         {activeItem === 'hamburguerias' ? (
-          <a className="link" href="/hamburguerias">
+          <a className="link" href="/pedidos">
             Pedidos
           </a>
         ) : (

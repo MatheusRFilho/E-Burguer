@@ -1,0 +1,13 @@
+.content {
+  height: 100vh;
+}
+
+.hamburguerias-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(384px, 1fr));
+  grid-gap: 30px;
+
+  margin: 20px 30px ;
+}
+
+

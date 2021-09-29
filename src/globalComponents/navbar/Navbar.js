@@ -11,9 +11,15 @@ const NavBar = ({ activeItem }) => {
         </a>
       </div>
       <div className="nav-bar-div">
-        <a className="link" href="/">
-          Hamburguerias
-        </a>
+        {activeItem === 'hamburguerias' ? (
+          <a className="link" href="/hamburguerias">
+            Pedidos
+          </a>
+        ) : (
+          <a className="link" href="/hamburguerias">
+            Hamburguerias
+          </a>
+        )}
       </div>
       <div className="nav-bar-div">
         <a className="link" href="/">

@@ -1,0 +1,43 @@
+.content {
+  height: 100vh;
+}
+
+.forms-login-research {
+  display: flex;
+  flex-direction: row;
+}
+
+.forms-login-research .form-search-login .form-input{
+  display: flex;
+  flex-direction: column;
+  width: 49vw;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  margin-top: 40px;
+
+}
+
+.forms-login-research .form-search-login .form-input-first{
+  display: flex;
+  flex-direction: column;
+  width: 49vw;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  margin-top: 40px;
+
+  border-right: 1px solid black;
+}
+
+.forms-login-research .form-search-login .form-input label,
+.forms-login-research .form-search-login .form-input-first label{
+  margin-top: 20px;
+}
+
+.forms-login-research .form-search-login .form-input input {
+  width: 100%;
+
+}
+
+

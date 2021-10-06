@@ -32,7 +32,7 @@ const NavBar = ({ activeItem }) => {
         </a>
       </div>
       <div className="nav-bar-div">
-        <a className="link login" href="/">
+        <a className="link login" href="/entrar-registrar">
           Entrar
         </a>
       </div>

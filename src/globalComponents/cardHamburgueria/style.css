@@ -17,3 +17,8 @@
 
   margin-right: 15px;
 }
+
+.desactivated {
+  color: black;
+  text-decoration: none;
+}

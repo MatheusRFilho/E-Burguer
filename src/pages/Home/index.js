@@ -45,14 +45,14 @@ function Home() {
         </form>
 
         <div className="hamburguerias-cards">
-          <CardHamburgueria image={logoHamburgueria} text="test" />
-          <CardHamburgueria text="test" />
-          <CardHamburgueria text="test" />
-          <CardHamburgueria text="test" />
-          <CardHamburgueria text="test" />
-          <CardHamburgueria text="test" />
-          <CardHamburgueria text="test" />
-          <CardHamburgueria text="test" />
+          <CardHamburgueria image={logoHamburgueria} text="test" id="2" />
+          <CardHamburgueria text="test" id="1" />
+          <CardHamburgueria text="test" id="1" />
+          <CardHamburgueria text="test" id="1" />
+          <CardHamburgueria text="test" id="1" />
+          <CardHamburgueria text="test" id="1" />
+          <CardHamburgueria text="test" id="1" />
+          <CardHamburgueria text="test" id="1" />
         </div>
       </div>
       <Footer></Footer>

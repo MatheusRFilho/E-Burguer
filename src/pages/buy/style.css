@@ -1,5 +1,7 @@
-.content {
+.contentLanches {
   height: 100%;
+  display: flex;
+  flex-direction: row;
 }
 
 .lanches {

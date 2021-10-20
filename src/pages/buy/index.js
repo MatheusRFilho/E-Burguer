@@ -26,7 +26,7 @@ function Buy() {
 
   return (
     <>
-      <NavBar></NavBar>
+      <NavBar isLogged={true}></NavBar>
       <div className="contentLanches">
         <div>
           <div className="lanches">

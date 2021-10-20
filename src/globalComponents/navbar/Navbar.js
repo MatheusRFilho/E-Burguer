@@ -2,7 +2,7 @@ import './NavBar.css';
 
 import logo from '../../images/logo.png';
 
-const NavBar = ({ activeItem }) => {
+const NavBar = ({ activeItem, isLogged = false }) => {
   return (
     <div className="nav-bar">
       <div className="nav-bar-div">
@@ -32,9 +32,15 @@ const NavBar = ({ activeItem }) => {
         </a>
       </div>
       <div className="nav-bar-div">
-        <a className="link login" href="/entrar-registrar">
-          Entrar
-        </a>
+        {isLogged ? (
+          <a className="link login" href="/profile">
+            Olá Sr(a) Kalil
+          </a>
+        ) : (
+          <a className="link login" href="/entrar-registrar">
+            Entrar
+          </a>
+        )}
       </div>
     </div>
   );

@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import './style.css';
 import NavBar from '../../globalComponents/navbar/Navbar.js';
 import Footer from '../../globalComponents/footer/Footer.js';
@@ -7,7 +8,6 @@ import api from '../../config/api';
 import { useHistory } from 'react-router';
 import { useDispatch } from 'react-redux';
 import 'react-toastify/dist/ReactToastify.css';
-import { ToastContainer, toast } from 'react-toastify';
 import { login } from '../../features/slice';
 
 function Login() {
@@ -72,24 +72,6 @@ function Login() {
   };
 
   let history = useHistory();
-
-  const notifyError = () =>
-    toast.error('Email ou senha estão errados!', {
-      position: 'top-right',
-      autoClose: 3000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      style: {
-        color: '#000',
-      },
-      bodyStyle: {
-        backgroundColor: '#f00',
-      },
-      closeButton: false,
-    });
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -210,7 +192,6 @@ function Login() {
         </div>
       </div>
       <Footer></Footer>
-      <ToastContainer />
     </>
   );
 }

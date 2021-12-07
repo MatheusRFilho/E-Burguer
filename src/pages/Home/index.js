@@ -1,16 +1,27 @@
 import './style.css';
 import NavBar from '../../globalComponents/navbar/Navbar.js';
 import Footer from '../../globalComponents/footer/Footer.js';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import CardHamburgueria from '../../globalComponents/cardHamburgueria';
 
-import logoHamburgueria from '../../images/logohamburgueria.png';
+import api from '../../config/api';
 
 function Home() {
   const [searchText, setSearchText] = useState('');
+  const [hamburguerias, setHamburguerias] = useState([]);
+
+  useEffect(() => {
+    getHamburguerias();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  });
 
   const handleSearchText = (event) => {
     setSearchText(event.target.value);
+  };
+
+  const getHamburguerias = async () => {
+    const { data } = await api.get('hamburguerias');
+    setHamburguerias(data);
   };
 
   return (
@@ -45,14 +56,9 @@ function Home() {
         </form>
 
         <div className="hamburguerias-cards">
-          <CardHamburgueria image={logoHamburgueria} text="test" id="2" />
-          <CardHamburgueria text="test" id="1" />
-          <CardHamburgueria text="test" id="1" />
-          <CardHamburgueria text="test" id="1" />
-          <CardHamburgueria text="test" id="1" />
-          <CardHamburgueria text="test" id="1" />
-          <CardHamburgueria text="test" id="1" />
-          <CardHamburgueria text="test" id="1" />
+          {hamburguerias.map((item) => {
+            return <CardHamburgueria text={item.name} id={item._id} />;
+          })}
         </div>
       </div>
       <Footer></Footer>

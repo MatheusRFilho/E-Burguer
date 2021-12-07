@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './lanche.css';
 
-function Lanche({ onClick, title, price, image, onRemove }) {
+function Lanche({ onClick, title, price, image, onRemove, description }) {
   const [activated, setActivated] = useState(false);
 
   const handleClick = () => {
@@ -18,6 +18,7 @@ function Lanche({ onClick, title, price, image, onRemove }) {
       ) : null}
       <p>{title}</p>
       <p>{price}</p>
+      <p>{description}</p>
     </button>
   );
 }

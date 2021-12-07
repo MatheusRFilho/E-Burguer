@@ -5,12 +5,25 @@ import Lanche from './components/lanche';
 
 import logoHamburgueria from '../../images/logohamburgueria.png';
 // import { useParams } from 'react-router';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { useParams } from 'react-router';
+import api from '../../config/api';
 
 function CreateLanche() {
-  // const { id } = useParams();
+  const { id } = useParams();
 
   const [itensInCart, setItensInCart] = useState([]);
+  const [lanches, setLanches] = useState([]);
+
+  useEffect(() => {
+    getLanches();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  });
+
+  const getLanches = async () => {
+    const { data } = await api.get(`lanche/${id}`);
+    setLanches(data);
+  };
 
   const handleAddLancheAtCart = (item) => {
     setItensInCart([...itensInCart, item]);
@@ -30,234 +43,29 @@ function CreateLanche() {
       <div className="contentLanches">
         <div>
           <div className="lanches">
-            <Lanche
-              onClick={() =>
-                handleAddLancheAtCart({
-                  name: 'X-Burguer',
-                  price: 'R$7,00',
-                  id: 1,
-                })
-              }
-              onRemove={() =>
-                handleRemoveLancheAtCart({
-                  name: 'X-Burguer',
-                  price: 'R$7.00',
-                  id: 1,
-                })
-              }
-              title="X-Burguer"
-              price="R$7.00"
-              image={logoHamburgueria}
-            />
-            <Lanche
-              onClick={() =>
-                handleAddLancheAtCart({
-                  name: 'X-Burguer',
-                  price: 'R$7,00',
-                  id: 2,
-                })
-              }
-              onRemove={() =>
-                handleRemoveLancheAtCart({
-                  name: 'X-Burguer',
-                  price: 'R$7.00',
-                  id: 2,
-                })
-              }
-              title="X-Burguer"
-              price="R$7.00"
-              image={logoHamburgueria}
-            />
-            <Lanche
-              onClick={() =>
-                handleAddLancheAtCart({
-                  name: 'X-Burguer',
-                  price: 'R$7,00',
-                  id: 3,
-                })
-              }
-              onRemove={() =>
-                handleRemoveLancheAtCart({
-                  name: 'X-Burguer',
-                  price: 'R$7.00',
-                  id: 3,
-                })
-              }
-              title="X-Burguer"
-              price="R$7.00"
-              image={logoHamburgueria}
-            />
-            <Lanche
-              onClick={() =>
-                handleAddLancheAtCart({
-                  name: 'X-Burguer',
-                  price: 'R$7,00',
-                  id: 4,
-                })
-              }
-              onRemove={() =>
-                handleRemoveLancheAtCart({
-                  name: 'X-Burguer',
-                  price: 'R$7.00',
-                  id: 4,
-                })
-              }
-              title="X-Burguer"
-              price="R$7.00"
-              image={logoHamburgueria}
-            />
-            <Lanche
-              onClick={() =>
-                handleAddLancheAtCart({
-                  name: 'X-Burguer',
-                  price: 'R$7,00',
-                  id: 5,
-                })
-              }
-              onRemove={() =>
-                handleRemoveLancheAtCart({
-                  name: 'X-Burguer',
-                  price: 'R$7.00',
-                  id: 5,
-                })
-              }
-              title="X-Burguer"
-              price="R$7.00"
-              image={logoHamburgueria}
-            />
-            <Lanche
-              onClick={() =>
-                handleAddLancheAtCart({
-                  name: 'X-Burguer',
-                  price: 'R$7,00',
-                  id: 6,
-                })
-              }
-              onRemove={() =>
-                handleRemoveLancheAtCart({
-                  name: 'X-Burguer',
-                  price: 'R$7.00',
-                  id: 6,
-                })
-              }
-              title="X-Burguer"
-              price="R$7.00"
-              image={logoHamburgueria}
-            />
-            <Lanche
-              onClick={() =>
-                handleAddLancheAtCart({
-                  name: 'X-Burguer',
-                  price: 'R$7,00',
-                  id: 7,
-                })
-              }
-              onRemove={() =>
-                handleRemoveLancheAtCart({
-                  name: 'X-Burguer',
-                  price: 'R$7.00',
-                  id: 7,
-                })
-              }
-              title="X-Burguer"
-              price="R$7.00"
-              image={logoHamburgueria}
-            />
-            <Lanche
-              onClick={() =>
-                handleAddLancheAtCart({
-                  name: 'X-Burguer',
-                  price: 'R$7,00',
-                  id: 8,
-                })
-              }
-              onRemove={() =>
-                handleRemoveLancheAtCart({
-                  name: 'X-Burguer',
-                  price: 'R$7.00',
-                  id: 8,
-                })
-              }
-              title="X-Burguer"
-              price="R$7.00"
-              image={logoHamburgueria}
-            />
-            <Lanche
-              onClick={() =>
-                handleAddLancheAtCart({
-                  name: 'X-Burguer',
-                  price: 'R$7,00',
-                  id: 9,
-                })
-              }
-              onRemove={() =>
-                handleRemoveLancheAtCart({
-                  name: 'X-Burguer',
-                  price: 'R$7.00',
-                  id: 9,
-                })
-              }
-              title="X-Burguer"
-              price="R$7.00"
-              image={logoHamburgueria}
-            />
-            <Lanche
-              onClick={() =>
-                handleAddLancheAtCart({
-                  name: 'X-Burguer',
-                  price: 'R$7,00',
-                  id: 10,
-                })
-              }
-              onRemove={() =>
-                handleRemoveLancheAtCart({
-                  name: 'X-Burguer',
-                  price: 'R$7.00',
-                  id: 10,
-                })
-              }
-              title="X-Burguer"
-              price="R$7.00"
-              image={logoHamburgueria}
-            />
-            <Lanche
-              onClick={() =>
-                handleAddLancheAtCart({
-                  name: 'X-Burguer',
-                  price: 'R$7,00',
-                  id: 11,
-                })
-              }
-              onRemove={() =>
-                handleRemoveLancheAtCart({
-                  name: 'X-Burguer',
-                  price: 'R$7.00',
-                  id: 11,
-                })
-              }
-              title="X-Burguer"
-              price="R$7.00"
-              image={logoHamburgueria}
-            />
-            <Lanche
-              onClick={() =>
-                handleAddLancheAtCart({
-                  name: 'X-Bacon',
-                  price: 'R$14,00',
-                  id: 12,
-                })
-              }
-              onRemove={() =>
-                handleRemoveLancheAtCart({
-                  name: 'X-Bacon',
-                  price: 'R$14.00',
-                  id: 12,
-                })
-              }
-              title="X-Bacon"
-              price="R$14.00"
-              image={logoHamburgueria}
-            />
+            {lanches.map((item) => {
+              return (
+                <Lanche
+                  onClick={() =>
+                    handleAddLancheAtCart({
+                      name: item.name,
+                      price: `R$${item.price}`,
+                      id: item._id,
+                    })
+                  }
+                  onRemove={() =>
+                    handleRemoveLancheAtCart({
+                      name: item.name,
+                      price: `R$${item.price}`,
+                      id: item._id,
+                    })
+                  }
+                  title={item.name}
+                  price={`R$${item.price}`}
+                  description={item.description}
+                />
+              );
+            })}
           </div>
           <div
             style={{

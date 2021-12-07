@@ -10,6 +10,7 @@ export const userSlice = createSlice({
       state.user = action.payload;
 
       localStorage.setItem('token', action.payload.token);
+      localStorage.setItem('email', action.payload.email);
       localStorage.setItem('isHamburgueria', action.payload.isHamburgueria);
       localStorage.setItem('id', action.payload.id);
       localStorage.setItem('name', action.payload.name);

@@ -3,6 +3,9 @@ import NavBar from '../../globalComponents/navbar/Navbar.js';
 import Footer from '../../globalComponents/footer/Footer.js';
 
 function Profile() {
+  const name = localStorage.getItem('name');
+  const email = localStorage.getItem('email');
+
   return (
     <>
       <NavBar></NavBar>
@@ -36,25 +39,10 @@ function Profile() {
                 fontWeight: 400,
               }}
             >
-              Matheus Rodrigo
+              {name}
             </p>
           </p>
-          <p
-            style={{
-              fontSize: 20,
-              fontWeight: 700,
-            }}
-          >
-            Número:
-            <p
-              style={{
-                fontSize: 20,
-                fontWeight: 400,
-              }}
-            >
-              (12)991403532
-            </p>
-          </p>
+
           <p
             style={{
               fontSize: 20,
@@ -68,99 +56,9 @@ function Profile() {
                 fontWeight: 400,
               }}
             >
-              matheus@email.com
+              {email}
             </p>
           </p>
-        </div>
-
-        <div
-          style={{
-            justifyContent: 'center',
-            alignContent: 'center',
-            alignSelf: 'center',
-            marginLeft: '20px',
-          }}
-        >
-          <p
-            style={{
-              fontSize: 28,
-              fontWeight: 700,
-            }}
-          >
-            Endereços
-          </p>
-          <div>
-            <hr />
-            <div>
-              <p
-                style={{
-                  fontSize: 20,
-                  fontWeight: 400,
-                }}
-              >
-                Logradouro: Rua Padre Gebardo
-              </p>
-              <p
-                style={{
-                  fontSize: 20,
-                  fontWeight: 400,
-                }}
-              >
-                Numero: 432
-              </p>
-              <p
-                style={{
-                  fontSize: 20,
-                  fontWeight: 400,
-                }}
-              >
-                Bairro: Santa Rita
-              </p>
-              <p
-                style={{
-                  fontSize: 20,
-                  fontWeight: 400,
-                }}
-              >
-                Cidade: Aparecida
-              </p>
-            </div>
-            <hr />
-            <div>
-              <p
-                style={{
-                  fontSize: 20,
-                  fontWeight: 400,
-                }}
-              >
-                Logradouro: Rua Padre Gebardo
-              </p>
-              <p
-                style={{
-                  fontSize: 20,
-                  fontWeight: 400,
-                }}
-              >
-                Numero: 432
-              </p>
-              <p
-                style={{
-                  fontSize: 20,
-                  fontWeight: 400,
-                }}
-              >
-                Bairro: Santa Rita
-              </p>
-              <p
-                style={{
-                  fontSize: 20,
-                  fontWeight: 400,
-                }}
-              >
-                Cidade: Aparecida
-              </p>
-            </div>
-          </div>
         </div>
       </div>
       <Footer></Footer>

@@ -7,7 +7,7 @@ import logoHamburgueria from '../../images/logohamburgueria.png';
 // import { useParams } from 'react-router';
 import { useState } from 'react';
 
-function Buy() {
+function CreateLanche() {
   // const { id } = useParams();
 
   const [itensInCart, setItensInCart] = useState([]);
@@ -26,7 +26,7 @@ function Buy() {
 
   return (
     <>
-      <NavBar isLogged={true}></NavBar>
+      <NavBar></NavBar>
       <div className="contentLanches">
         <div>
           <div className="lanches">
@@ -264,7 +264,7 @@ function Buy() {
               display: 'flex',
             }}
           >
-            <button
+            {/* <button
               onClick={() => console.log(itensInCart)}
               style={{
                 cursor: 'pointer',
@@ -278,16 +278,16 @@ function Buy() {
               }}
             >
               Concluir Compra
-            </button>
+            </button> */}
           </div>
         </div>
-        <div>
+        {/* <div>
           <h1>Falta criar a parte de criar um lanche customizavel</h1>
-        </div>
+        </div> */}
       </div>
       <Footer></Footer>
     </>
   );
 }
 
-export default Buy;
+export default CreateLanche;

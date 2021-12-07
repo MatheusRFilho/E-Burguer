@@ -52,14 +52,14 @@ function Pedidos() {
               <CardHamburgueria text="test" />
             </div>
           </div>
-          <div className="secondDiv">
+          {/* <div className="secondDiv">
             <h4>Pedidos em andamento</h4>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-          </div>
+          </div> */}
         </div>
       </div>
       <Footer></Footer>

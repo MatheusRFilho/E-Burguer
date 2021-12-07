@@ -80,16 +80,33 @@ function Login() {
         email: emailLogin,
         password: passwordLogin,
       });
+
       dispatch(
         login({
           email: emailLogin,
           token: data.token,
-          isHamburgueria: data.admin,
+          admin: data.admin,
           name: data.name,
           id: data.id,
           loggedIn: true,
         }),
       );
+
+      history.push('/');
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const handleRegister = async (e) => {
+    e.preventDefault();
+    try {
+      const { data } = await api.post('sign-up', {
+        email: email,
+        password: password,
+        name: name,
+        admin: false,
+      });
 
       history.push('/');
     } catch (error) {
@@ -143,13 +160,7 @@ function Login() {
               <button
                 type="button"
                 className="form-button"
-                onClick={() => {
-                  console.log({
-                    name,
-                    email,
-                    password,
-                  });
-                }}
+                onClick={handleRegister}
               >
                 <p>Cadastrar</p>
               </button>

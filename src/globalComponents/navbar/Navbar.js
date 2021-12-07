@@ -5,6 +5,7 @@ import logo from '../../images/logo.png';
 const NavBar = ({ activeItem }) => {
   const logged = localStorage.getItem('logged') || false;
   const name = localStorage.getItem('name');
+  const admin = localStorage.getItem('admin');
 
   return (
     <div className="nav-bar">
@@ -14,7 +15,11 @@ const NavBar = ({ activeItem }) => {
         </a>
       </div>
       <div className="nav-bar-div">
-        {activeItem === 'hamburguerias' ? (
+        {admin === 'true' ? (
+          <a className="link" href="/create-lanche">
+            Criar Lanche
+          </a>
+        ) : activeItem === 'hamburguerias' ? (
           <a className="link" href="/pedidos">
             Pedidos
           </a>

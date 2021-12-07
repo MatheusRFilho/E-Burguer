@@ -11,7 +11,7 @@ export const userSlice = createSlice({
 
       localStorage.setItem('token', action.payload.token);
       localStorage.setItem('email', action.payload.email);
-      localStorage.setItem('isHamburgueria', action.payload.isHamburgueria);
+      localStorage.setItem('admin', action.payload.admin);
       localStorage.setItem('id', action.payload.id);
       localStorage.setItem('name', action.payload.name);
       localStorage.setItem('logged', action.payload.loggedIn);
